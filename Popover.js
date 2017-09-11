@@ -10,7 +10,7 @@ import {
   View,
   Easing
 } from 'react-native';
-
+var createReactClass = require('create-react-class');
 var noop = () => {};
 
 var {height: SCREEN_HEIGHT, width: SCREEN_WIDTH} = Dimensions.get('window');
@@ -33,7 +33,7 @@ function Rect(x, y, width, height) {
   this.height = height;
 }
 
-var Popover = React.createClass({
+var Popover = createReactClass({
   propTypes: {
     isVisible: PropTypes.bool,
     onClose: PropTypes.func,
